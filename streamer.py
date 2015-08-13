@@ -38,7 +38,7 @@ class CustomListener(StreamListener):
     data['geo'] = tweet.geo
     
     print data, '\n'
-    # self.db.Tweets.insert(data)
+    self.db.Tweets.insert(data)
 
   def on_error(self, status):
     print >> sys.stderr, 'Error: ', status
