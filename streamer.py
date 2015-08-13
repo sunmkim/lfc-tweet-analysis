@@ -8,11 +8,11 @@ from tweepy.streaming import StreamListener
 client = pymongo.MongoClient('localhost', 27017)
 db = client.test
 
-consumer_key=""
-consumer_secret=""
+consumer_key="1HGHBB0r4TD6wbPin2osFvABb"
+consumer_secret="0fSH0pOa1X4VzJoCgKZLdwqoQuzCPJZh7eS9AJvwfYxi89htSV"
 
-access_token=""
-access_token_secret=""
+access_token="2881128166-fqcHYt7DcwGnMTyeQgAuhnKyub0OvTw7oQiwFDy"
+access_token_secret="P2VCectHrHOGo9hi5fZrl8ZytBdPz2VbmzK3q22GMJNQB"
 
 auth = OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
