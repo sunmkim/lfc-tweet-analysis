@@ -1,3 +1,9 @@
+'''
+Collect real-time stream of tweets and store them in a MongoDB collection.
+
+'''
+
+
 import sys
 import pymongo
 import tweepy
@@ -32,7 +38,7 @@ class CustomListener(StreamListener):
     data['geo'] = tweet.geo
     
     print data, '\n'
-    self.db.Tweets.insert(data)
+    # self.db.Tweets.insert(data)
 
   def on_error(self, status):
     print >> sys.stderr, 'Error: ', status
