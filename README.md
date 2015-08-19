@@ -5,8 +5,11 @@ The goal of this project is to collect real-time stream of tweets, and analyse &
 - Pymongo
 - Tweepy
 - Pandas
+- Vincent
 
 ## Python (~.py) files 
 **streamer.py** - Creates a listener that collects tweets in real-time and stores them in a MongoDB collection.
 
-**to_csv.py** - Creates and writes a csv file from data stored in MongoDB
+**to_csv.py** - Creates and writes a csv file named `tweets.csv` from data stored in MongoDB
+
+**graph.py** - Converts data in `tweets.csv` to a pandas time series and creates a graph with [Vincent](http://vincent.readthedocs.org/en/latest/).
