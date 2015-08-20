@@ -49,4 +49,4 @@ class CustomListener(StreamListener):
     return True
 
 listen = Stream(auth, CustomListener(api))
-listen.filter(track=['liverpool'])
+listen.filter(track=['liverpool','lfc','liverpoolfc'])
