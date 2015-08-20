@@ -9,6 +9,7 @@ texts = pandas.read_csv('./tweets.csv')['text']
 
 tokens = []
 
+# strip words of punctuation marks
 for text in texts.values:
   tokens.extend([word.lower().strip(':,."-') for word in text.split()])
 
