@@ -23,10 +23,10 @@ In the stream listener, as found in `streamer.py`, I'm specifically listening fo
 My first game of analysis was the Arsenal-Liverpool game on August 24, played at the Emirates Stadium. I started the live twitter stream right at kick-off, which was around 3:00pm EST. The stream was activated for the entirety of the game, and turned off at 4:53pm EST, a few minutes after the final whistle. Using the scripts from `graph.py` and `word_freq.py`, I had a time-series plot of the volume of tweets with relevant key words, and a frequency distribution of the most common words found in my data. First, let us examine the time-twitter volume plot.
 ### Twitter volume as a function of time
 Here is the graph of relevant tweets as a function of time:
-![Alt text](https://raw.github.com/kimasx/lfc-tweet-analysis/master/time_series.png "Twitter Volume vs Time")
+![Alt text](https://raw.github.com/kimasx/lfc-tweet-analysis/master/assets/time_series.png "Twitter Volume vs Time")
 Examining the data, it seems that each peak corresponds with a memorable event in the game, i.e. a goal-scoring opportunity, booking, etc. The first spike that we see in the plot, around 03:04, correspond with this exact moment, when Coutinho hits the bar:
-![Alt text](http://www.github.com/kimasx/lfc-tweet-analysis/master/coutinho.gif "Coutinho hits bar")
+<img src="/assets/coutinho.gif">
 
-<!-- ![Alt text](https://raw.github.com/kimasx/lfc-tweet-analysis/master/word_freq.png "Word Counts") -->
+<!-- ![Alt text](https://raw.github.com/kimasx/lfc-tweet-analysis/master/assets/word_freq.png "Word Counts") -->
 
 
