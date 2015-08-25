@@ -61,7 +61,7 @@ On every new tweet that comes through the filtered stream, we're creating a dict
 ```
 
 ### to_csv.py
-`to_csv.py` simply writes data to a csv file using the data that we have stored in MongoDB. Using the `csv` python module, we create a writer which writes to a csv fil ecalled `tweets.csv`:
+`to_csv.py` simply writes data to a csv file using the data that we have stored in MongoDB. Using the `csv` python module, we create a writer which writes to a csv file called `tweets.csv`:
 ```python
 with open('tweets.csv', 'w') as outfile:
   fieldnames = ['text', 'user', 'created_at', 'geo']
@@ -78,9 +78,14 @@ for data in db.Tweets.find():
     'geo': data['geo']
   })
 ```
-For `text` and `user` data, we make sure to encode any unicode to UTF-8 so that data is readable both to humans and the machine.
+For `text` and `user` data, we must make sure to encode any unicode to UTF-8 so that data is readable both to humans and the machine.
 
-
-
+### graph.py
+Now that we have exported our data to a csv file, we can start to analyze them by charting a plot of tweet volume over time using pandas and vincent, a library that allows us to build Vega visualizations with python. First we create a pandas dataframe, then use the `created_at` column as index to create a pandas time series.
+```python
+tweets = p.read_csv('./tweets.csv')
+tweets['created_at'] = p.to_datetime(p.Series(tweets['created_at']))
+tweets.set_index('created_at', drop=False, inplace=True)
+```
 
 
