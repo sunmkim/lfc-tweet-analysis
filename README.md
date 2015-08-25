@@ -116,3 +116,8 @@ Now, we create a new filtered words list after removing stop words and removing 
 ```python
 filtered_tokens = [word.decode('utf-8') for word in tokens if not word.decode('utf-8') in stop]
 ```
+With help from nltk, we can easily plot a frequency distribution of the top 25 words used during the game.
+```python
+freq_dist = nltk.FreqDist(filtered_tokens)
+print freq_dist.plot(25)
+```
