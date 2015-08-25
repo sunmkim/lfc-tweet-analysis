@@ -26,8 +26,7 @@ Here is the graph of relevant tweets as a function of time:
 ![Alt text](https://raw.github.com/kimasx/lfc-tweet-analysis/master/time_series.png "Twitter Volume vs Time")
 Examining the data, it seems that each peak corresponds with a memorable event in the game, i.e. a goal-scoring opportunity, booking, etc. The first spike that we see in the plot, around 03:04, correspond with this exact moment, when Coutinho hits the bar:
 
-<img class="gfyitem" data-id="CourteousImportantFieldspaniel" />
-
+<iframe src="http://gfycat.com/ifr/CourteousImportantFieldspaniel" frameborder="0" scrolling="no" width="640" height="352" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);" ></iframe>
 
 <!-- ![Alt text](https://raw.github.com/kimasx/lfc-tweet-analysis/master/word_freq.png "Word Counts") -->
 
