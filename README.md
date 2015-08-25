@@ -25,7 +25,8 @@ My first game of analysis was the Arsenal-Liverpool game on August 24, played at
 Here is the graph of relevant tweets as a function of time:
 ![Alt text](https://raw.github.com/kimasx/lfc-tweet-analysis/master/assets/time_series.png "Twitter Volume vs Time")
 Examining the data, it seems that each peak corresponds with a memorable event in the game, i.e. a goal-scoring opportunity, booking, etc. The first spike that we see in the plot, around 03:04, correspond with this exact moment, when Coutinho hits the bar:
-<img src="/assets/coutinho.gif">
+<br>
+<img src="/assets/coutinho.gif" style="display:block;">
 
 <!-- ![Alt text](https://raw.github.com/kimasx/lfc-tweet-analysis/master/assets/word_freq.png "Word Counts") -->
 
