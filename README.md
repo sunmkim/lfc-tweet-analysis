@@ -54,4 +54,11 @@ This file uses Pymongo and Tweepy to collect real-time twitter data and store th
     print data, '\n'
     self.db.Tweets.insert(data)
 ```
-On every new tweet that comes through the filtered stream, we're creating a dictionary with 4 keys(`text`, `user`, `created_at` and `geo`). `text` is the actual content of the tweet itself, `user` is the twitter handle of the user who posted the said tweet, `created_at` is the time when the tweet was posted, and `geo` is the location at which the tweet was created. The `geo` is only available for those users that enable geo-tracking.
+On every new tweet that comes through the filtered stream, we're creating a dictionary, called `data`, with 4 keys (`text`, `user`, `created_at` and `geo`). `text` is the actual content of the tweet itself; `user` is the twitter handle of the user who posted the said tweet; `created_at` is the time when the tweet was posted; and `geo` is the location at which the tweet was created. The `geo` is only available for those users that enable geo-tracking, and thus, majority of the tweets do not have this information. Once we create the dictionary, we can store it into a MongoDB collection, called Tweets, with `self.db.Tweets.insert(data)`. Finally, we create an instance of the stream and filter for search words using an array:
+```python
+  listen = Stream(auth, CustomListener(api))
+  listen.filter(track=['liverpool','lfc','liverpoolfc'])
+```
+
+
+Once we have defined the `CustomListener` class, we can instantiate
