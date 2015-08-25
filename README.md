@@ -100,7 +100,7 @@ area.display()
 ```
 
 ### word_freq.py
-We can also find the most commonly-used words during the Arsenal-Liverpool game with pandas and nltk. Nltk makes it very easy to process text, and probably saved me from writing a bunch more code in `word_freq.py`. To parse and proess the twitter texts, we first filter out for stop words, which are high-frequency words that are often irrelevant, such as articles, prepositions, etc (think "to", "the", "also"). Then, we strip all the words in twitter texts of punctuation marks. This is so that words like "Arsenal" and "Arsenal." are not counted as two different words.
+We can also find the most commonly-used words during the Arsenal-Liverpool game with pandas and nltk. Nltk makes it very easy to process text, and probably saved me from writing a bunch more code in `word_freq.py`. To parse and proess twitter texts, we first filter out for stop words, which are high-frequency words that are often irrelevant, such as articles, prepositions, etc (think "to", "the", "also"). Then, we strip all the words in twitter texts of punctuation marks. This is so that words like "Arsenal" and "Arsenal." are not counted as two different words.
 ```python
 # get english stopwords
 stop = stopwords.words('english')
@@ -111,4 +111,8 @@ tokens = []
 # strip words of punctuation marks
 for text in texts.values:
   tokens.extend([word.lower().strip(':,."-') for word in text.split()])
+```
+Now, we create a new filtered words list after removing stop words and removing punctuation marks. Again, we have to take account Unicode encoding to make it machine readable.
+```python
+filtered_tokens = [word.decode('utf-8') for word in tokens if not word.decode('utf-8') in stop]
 ```
