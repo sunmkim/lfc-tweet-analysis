@@ -18,3 +18,10 @@ The goal of this project is to collect real-time stream of tweets, and analyse &
 **word_freq.py** - Filters out texts in `tweets.csv`, looking for relevant words, and plots a frequency distribution of those words using the [NLTK](http://www.nltk.org/) platform.
 
 In the stream listener, as found in `streamer.py`, I'm specifically listening for tweets that contain the words 'liverpool', 'lfc', or 'liverpoolfc'.
+
+## Arsenal-Liverpool Tweet Analysis (08/24/2015)
+My first game of analysis was the Arsenal-Liverpool game on August 24, played at the Emirates Stadium. I started the live twitter stream right at kick-off, which was around 3:03pm EST. The stream was activated for the entirety of the game, and turned off at 4:53pm EST, a few minutes after the final whistle. Using the scripts from `graph.py` and `word_freq.py`, I had a time-series plot of the volume of tweets with relevant key words, and a frequency distribution of the most common words found in my data. First, let us examine the time-twitter volume plot.
+### Twitter volume as a function of time
+Here is the graph of relevant tweets as a function of time:
+![Alt text](/times_series.png?raw=true "Twitter Volume vs Time")
+
