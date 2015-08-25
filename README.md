@@ -100,4 +100,15 @@ area.display()
 ```
 
 ### word_freq.py
-We can also find the most commonly-used words during the Arsenal-Liverpool game with pandas and nltk. Nltk makes it very easy to process text, and probably saved me from writing a bunch more code in `word_freq.py`. To parse and proess the twitter texts, we first filter out for stop words, which are high-frequency words that are often irrelevant, such as articles, prepositions, etc (think "to", "the", "also").
+We can also find the most commonly-used words during the Arsenal-Liverpool game with pandas and nltk. Nltk makes it very easy to process text, and probably saved me from writing a bunch more code in `word_freq.py`. To parse and proess the twitter texts, we first filter out for stop words, which are high-frequency words that are often irrelevant, such as articles, prepositions, etc (think "to", "the", "also"). Then, we strip all the words in twitter texts of punctuation marks. This is so that words like "Arsenal" and "Arsenal." are not counted as two different words.
+```python
+# get english stopwords
+stop = stopwords.words('english')
+texts = pandas.read_csv('./tweets.csv')['text']
+
+tokens = []
+
+# strip words of punctuation marks
+for text in texts.values:
+  tokens.extend([word.lower().strip(':,."-') for word in text.split()])
+```
