@@ -68,3 +68,19 @@ with open('tweets.csv', 'w') as outfile:
   writer = csv.DictWriter(outfile, delimiter=',', fieldnames=fieldnames)
   writer.writeheader()
 ```
+Next, we sort through the Tweets collection and write the appropriate data matching their fieldnames:
+```python
+for data in db.Tweets.find():
+  writer.writerow({ 
+    'text': data['text'].encode('utf-8'), 
+    'user': data['user'].encode('utf-8'), 
+    'created_at': data['created_at'],
+    'geo': data['geo']
+  })
+```
+For `text` and `user` data, we make sure to encode any unicode to UTF-8 so that data is readable both to humans and the machine.
+
+
+
+
+
