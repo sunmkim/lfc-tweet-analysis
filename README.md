@@ -87,8 +87,15 @@ tweets = p.read_csv('./tweets.csv')
 tweets['created_at'] = p.to_datetime(p.Series(tweets['created_at']))
 tweets.set_index('created_at', drop=False, inplace=True)
 ```
-We are then able to convert the data into "per minute" unit. In other words, we now have tweets per minute on the y-axis.
+We are then able to convert the data into "per minute" unit. In other words, we now have tweets per minute on the y-axis. We can now display the plot using the color of our choice, using the vincent library.
 ```python
+# created_at index is formatted to per minute
 tweets_pm = tweets['created_at'].resample('1t', how='count')
+
+# create time series graph via Vincent
+vincent.core.initialize_notebook()
+area = vincent.Area(tweets_pm)
+area.colors(brew='Spectral')
+area.display()
 ```
 
