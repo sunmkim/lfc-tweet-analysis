@@ -87,7 +87,7 @@ tweets = p.read_csv('./tweets.csv')
 tweets['created_at'] = p.to_datetime(p.Series(tweets['created_at']))
 tweets.set_index('created_at', drop=False, inplace=True)
 ```
-We are then able to convert the data into "per minute" unit. In other words, we now have tweets per minute on the y-axis. We can now display the plot using the color of our choice, using the vincent library.
+We are then able to convert the data into "per minute" unit. In other words, we now have tweets per minute on the y-axis. And now we can display the plot using the color of our choice with the vincent library.
 ```python
 # created_at index is formatted to per minute
 tweets_pm = tweets['created_at'].resample('1t', how='count')
@@ -99,3 +99,5 @@ area.colors(brew='Spectral')
 area.display()
 ```
 
+### word_freq.py
+We can also find the most commonly-used words during the Arsenal-Liverpool game with pandas and nltk. Nltk makes it very easy to process text, and probably saved me from writing a bunch more code in `word_freq.py`. To parse and proess the twitter texts, we first filter out for stop words, which are high-frequency words that are often irrelevant, such as articles, prepositions, etc (think "to", "the", "also").
