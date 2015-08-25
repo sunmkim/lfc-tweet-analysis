@@ -42,4 +42,15 @@ Given the filter words, we expect `liverpool` and `#lfc` to be the most common w
 ## Code Overview
 Let us now examine in detail the four python files mentioned.
 ### streamer.py
-This file uses Pymongo and Tweepy to collect real-time twitter data and store them in a MongoDB collection. The key method in the `CustomListener` class is `on_status()`.
+This file uses Pymongo and Tweepy to collect real-time twitter data and store them in a MongoDB collection. The key method in the `CustomListener` class is `on_status()`:
+```python
+  def on_status(self, tweet):
+    data = {}
+    data['text'] = tweet.text
+    data['user'] = tweet.user.screen_name
+    data['created_at'] = tweet.created_at
+    data['geo'] = tweet.geo
+    
+    print data, '\n'
+    self.db.Tweets.insert(data)
+```
