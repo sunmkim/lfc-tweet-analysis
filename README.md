@@ -1,4 +1,4 @@
-# Analysis of Tweets on Liverpool FC games for the 15/16 Barclays Premier League Season
+# Analysis of Liverpool FC Tweets in the 15/16 Barclays Premier League Season
 The goal of this project is to collect real-time stream of tweets, and analyse & visualise that data. I will not cover all Liverpool games of the 15/16 season, only a few notable ones.
 
 ## Libraries used
@@ -20,13 +20,17 @@ The goal of this project is to collect real-time stream of tweets, and analyse &
 In the stream listener, as found in `streamer.py`, I'm specifically listening for tweets that contain the words 'liverpool', 'lfc', or 'liverpoolfc'.
 
 ## Arsenal-Liverpool Tweet Analysis (08/24/2015)
-My first game of analysis was the Arsenal-Liverpool game on August 24, played at the Emirates Stadium. I started the live twitter stream right at kick-off, which was around 3:00pm EST. The stream was activated for the entirety of the game, and turned off at 4:53pm EST, a few minutes after the final whistle. Using the scripts from `graph.py` and `word_freq.py`, I had a time-series plot of the volume of tweets with relevant key words, and a frequency distribution of the most common words found in my data. First, let us examine the time-twitter volume plot.
-### Twitter volume as a function of time
+My first game of analysis was the Arsenal-Liverpool game on August 24, played at the Emirates Stadium. I started the live twitter stream right at kick-off, which was around 3:00pm EST. The stream was activated for the entirety of the game, and turned off at 4:53pm EST, a few minutes after the final whistle. Using the scripts from `graph.py` and `word_freq.py`, I had a time-series plot of the volume of tweets per minute with relevant key words, and a frequency distribution of the most common words found in my data. First, let us examine the time-twitter volume plot.
+### Twitter volume per minute as a function of time
 Here is the graph of relevant tweets as a function of time:
-![Alt text](https://raw.github.com/kimasx/lfc-tweet-analysis/master/assets/time_series.png "Twitter Volume vs Time")
+![Alt text](https://raw.github.com/kimasx/lfc-tweet-analysis/master/assets/time_series.png "Twitter Volume per Minute vs Time")
 Examining the data, it seems that each peak corresponds with a memorable event in the game, i.e. a goal-scoring opportunity, booking, etc. The first spike that we see in the plot, around 03:04, correspond with this exact moment, when Coutinho hits the bar:
 <br>
 <img src="/assets/coutinho.gif" style="display:block;">
+We see a large peak coming in at around 3:45, at almost 3,000 tweets per minute. Looking at the data, many of the tweets are about another Coutinho attempt at goal hitting the post:
+<br>
+<img src="/assets/bar.gif" style="display:block;">
+However, we see that this peak doesn't sharply decline, but declines gradually. This is most likely due to the fact that the goal-attempt came right before half-time, allowing users to comment on their thoughts about the first half of the game for about 15 minutes before the game started again.å
 
 <!-- ![Alt text](https://raw.github.com/kimasx/lfc-tweet-analysis/master/assets/word_freq.png "Word Counts") -->
 
