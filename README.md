@@ -61,4 +61,10 @@ On every new tweet that comes through the filtered stream, we're creating a dict
 ```
 
 ### to_csv.py
-`to_csv.py` simply writes data to a csv filed called `tweets.csv` using the data that we have stored in MongoDB.
+`to_csv.py` simply writes data to a csv file using the data that we have stored in MongoDB. Using the `csv` python module, we create a writer which writes to a csv fil ecalled `tweets.csv`:
+```python
+with open('tweets.csv', 'w') as outfile:
+  fieldnames = ['text', 'user', 'created_at', 'geo']
+  writer = csv.DictWriter(outfile, delimiter=',', fieldnames=fieldnames)
+  writer.writeheader()
+```
