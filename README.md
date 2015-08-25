@@ -60,5 +60,5 @@ On every new tweet that comes through the filtered stream, we're creating a dict
   listen.filter(track=['liverpool','lfc','liverpoolfc'])
 ```
 
-
-Once we have defined the `CustomListener` class, we can instantiate
+### to_csv.py
+`to_csv.py` simply writes data to a csv filed called `tweets.csv` using the data that we have stored in MongoDB.
