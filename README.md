@@ -37,5 +37,5 @@ However, we see that this peak doesn't sharply decline, but declines gradually. 
 
 ### Frequency distribution of 25 most common words
 ![Alt text](https://raw.github.com/kimasx/lfc-tweet-analysis/master/assets/word_freq.png "Word Counts")
-
+Given the filter words, we expect `liverpool` and `#lfc` to be the most common words, so this is not surprising. We see, however, that `rt`, or retweets, is the third most frequently used word during the game. This indicates that many users were simply retweeting others' comments.
 
