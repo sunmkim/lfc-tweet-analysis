@@ -20,7 +20,7 @@ The goal of this project is to collect real-time stream of tweets, and analyse &
 In the stream listener, as found in `streamer.py`, I'm specifically listening for tweets that contain the words 'liverpool', 'lfc', or 'liverpoolfc'.
 
 ## Arsenal-Liverpool Tweet Analysis (08/24/2015)
-My first game of analysis was the Arsenal-Liverpool game on August 24, played at the Emirates Stadium. I started the live twitter stream right at kick-off, which was around 3:00pm EST. The stream was activated for the entirety of the game, and turned off at 4:53pm EST, a few minutes after the final whistle. Using the scripts from `graph.py` and `word_freq.py`, I had a time-series plot of the volume of tweets per minute with relevant key words, and a frequency distribution of the most common words found in my data. First, let us examine the time-twitter volume plot.
+My first game of analysis was the Arsenal-Liverpool game on August 24, played at the Emirates Stadium. The game ended in a goalless draw at 0-0. I started the live twitter stream right at kick-off, which was around 3:00pm EST. The stream was activated for the entirety of the game, and turned off at 4:53pm EST, a few minutes after the final whistle. Using the scripts from `graph.py` and `word_freq.py`, I had a time-series plot of the volume of tweets per minute with relevant key words, and a frequency distribution of the most common words found in my data. First, let us examine the time-twitter volume plot.
 
 ### Twitter volume per minute as a function of time
 Here is the graph of relevant tweets as a function of time:
@@ -37,5 +37,5 @@ However, we see that this peak doesn't sharply decline, but declines gradually. 
 
 ### Frequency distribution of 25 most common words
 ![Alt text](https://raw.github.com/kimasx/lfc-tweet-analysis/master/assets/word_freq.png "Word Counts")
-Given the filter words, we expect `liverpool` and `#lfc` to be the most common words, so this is not surprising. We see, however, that `rt`, or retweets, is the third most frequently used word during the game. This indicates that many users were simply retweeting others' comments.
+Given the filter words, we expect `liverpool` and `#lfc` to be the most common words, so this is not surprising. We see, however, that `rt`, or retweets, is the third most frequently used word during the game. This indicates that many users were simply retweeting others' comments. The players that were most tweeted about are Cech and Coutinho. This also makes sense given each player's contribution to their respective teams and their highlight-worthy moments.
 
