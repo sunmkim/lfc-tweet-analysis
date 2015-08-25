@@ -54,4 +54,4 @@ This file uses Pymongo and Tweepy to collect real-time twitter data and store th
     print data, '\n'
     self.db.Tweets.insert(data)
 ```
-On every status that comes through the filtered stream, we're creating a dictionary with 4 keys--`text`, `user`, `created_at` and `geo`.
+On every new tweet that comes through the filtered stream, we're creating a dictionary with 4 keys(`text`, `user`, `created_at` and `geo`). `text` is the actual content of the tweet itself, `user` is the twitter handle of the user who posted the said tweet, `created_at` is the time when the tweet was posted, and `geo` is the location at which the tweet was created. The `geo` is only available for those users that enable geo-tracking.
