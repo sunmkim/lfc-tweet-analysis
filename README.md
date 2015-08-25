@@ -54,3 +54,4 @@ This file uses Pymongo and Tweepy to collect real-time twitter data and store th
     print data, '\n'
     self.db.Tweets.insert(data)
 ```
+On every status that comes through the filtered stream, we're creating a dictionary with 4 keys--`text`, `user`, `created_at` and `geo`.
