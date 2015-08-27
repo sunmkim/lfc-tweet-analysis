@@ -43,14 +43,15 @@ However, we see that this peak doesn't sharply decline, but declines gradually. 
 Given the filter words, we expect `liverpool` and `#lfc` to be the most common words, so this is not surprising. We see, however, that `rt`, or retweets, is the third most frequently used word during the game. This indicates that many users were simply retweeting others' comments. The players that were most tweeted about are Cech and Coutinho. This also makes sense given each player's contribution to their respective teams and their highlight-worthy moments.
 
 ### Mapping twitter data
-As previously mentioned, not every tweet includes location data, which is up to the user to decide. Out of 152,898 tweets collcted, only 612 contained `geo` data, which is only 0.4% of all tweets. With the help of Folium, we are able to visualize our tweets in 3 maps:<br>
+As previously mentioned, not every tweet includes location data, which is up to the user to decide. Out of 152,898 tweets collcted, only 612 contained `geo` data, which is only 0.4% of all tweets. With the help of Folium, we are able to visualize our tweets in 3 maps:<br><br>
 1) World
 ![Alt text](https://raw.github.com/kimasx/lfc-tweet-analysis/master/assets/world_map.png "World Map")
 In the world map, we see that the British Isles has a concentration of data points, which is expected for a Premier League match. Surprisingly, we also see heavy concentration in Southeast Asia, namely Malaysia, Singapore and Indonesia. Additionally, it is interesting to note that countries of former British African colonies (Nigeria, Kenya and South Africa) had relatively high twitter data 
-<br>
+<br><br>
 2) England
 ![Alt text](https://raw.github.com/kimasx/lfc-tweet-analysis/master/assets/england_map.png "England Map")
-<br>
+In England, London and Liverpool had the highest concentration of tweets, unsurprising given that it was an Arsenal-Liverpool game. The rest of tweets is more sporadically spread out among other major cities like Leicester, Birmingham, Leeds, etc.
+<br><br>
 3) Liverpool
 ![Alt text](https://raw.github.com/kimasx/lfc-tweet-analysis/master/assets/liverpool_map.png "Liverpool Map")
 
