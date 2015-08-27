@@ -138,3 +138,10 @@ With help from nltk, we can easily plot a frequency distribution of the top 25 w
 freq_dist = nltk.FreqDist(filtered_tokens)
 print freq_dist.plot(25)
 ```
+
+### map.py
+In `map.py` we can visualize our twitter data with Folium, which builds on maps using the Leaflet.js library. The first step in this file was to get `geo` data in our csv file. Since not all rows had value for `geo` column, we filter out for only those that do.
+```python
+# get geo data only from rows with non-empty values
+locations = pandas.read_csv('./tweets.csv', usecols=[3]).dropna()
+```
