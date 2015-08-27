@@ -46,8 +46,11 @@ Given the filter words, we expect `liverpool` and `#lfc` to be the most common w
 As previously mentioned, not every tweet includes location data, which is up to the user to decide. Out of 152,898 tweets collcted, only 612 contained `geo` data, which is only 0.4% of all tweets. With the help of Folium, we are able to visualize our tweets in 3 maps:<br>
 1) World
 ![Alt text](https://raw.github.com/kimasx/lfc-tweet-analysis/master/assets/world_map.png "World Map")
+In the world map, we see that the British Isles has a concentration of data points, which is expected for a Premier League match. Surprisingly, we also see heavy concentration in Southeast Asia, namely Malaysia, Singapore and Indonesia. Additionally, it is interesting to note that countries of former British African colonies (Nigeria, Kenya and South Africa) had relatively high twitter data 
+<br>
 2) England
 ![Alt text](https://raw.github.com/kimasx/lfc-tweet-analysis/master/assets/england_map.png "England Map")
+<br>
 3) Liverpool
 ![Alt text](https://raw.github.com/kimasx/lfc-tweet-analysis/master/assets/liverpool_map.png "Liverpool Map")
 
