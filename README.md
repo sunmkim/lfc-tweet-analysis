@@ -43,7 +43,7 @@ However, we see that this peak doesn't sharply decline, but declines gradually. 
 Given the filter words, we expect `liverpool` and `#lfc` to be the most common words, so this is not surprising. We see, however, that `rt`, or retweets, is the third most frequently used word during the game. This indicates that many users were simply retweeting others' comments. The players that were most tweeted about are Cech and Coutinho. This also makes sense given each player's contribution to their respective teams and their highlight-worthy moments.
 
 ### Mapping twitter data
-As previously mentioned, not every tweet includes location data, which is up to the user to decide. Out of 152,898 tweets collcted, only 612 contained `geo` data, which is only 0.4% of all tweets. With the help of Folium, we are able to visualize our tweets in 3 maps:
+As previously mentioned, not every tweet includes location data, which is up to the user to decide. Out of 152,898 tweets collcted, only 612 contained `geo` data, which is only 0.4% of all tweets. With the help of Folium, we are able to visualize our tweets in 3 maps:<br>
 1) World
 ![Alt text](https://raw.github.com/kimasx/lfc-tweet-analysis/master/assets/world_map.png "World Map")
 2) England
