@@ -153,3 +153,14 @@ for location in locations.values:
   # add to geos array an evaluated python literal syntax of the data
   geos.append(ast.literal_eval(location[0])['coordinates'])
 ```
+Finally, we use Folium to instantiate the map, create markers according to coordinates, and create the map onto an html file called `map.html`.
+```python
+# initialize and create map
+tweet_map = folium.Map(location=[52.8, -2], tiles='Mapbox Bright', zoom_start=7)
+
+# add markers
+for geo in geos:
+  tweet_map.circle_marker(location=geo, radius=250)
+
+tweet_map.create_map(path='map.html')
+```
