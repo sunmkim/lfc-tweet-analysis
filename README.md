@@ -140,8 +140,16 @@ print freq_dist.plot(25)
 ```
 
 ### map.py
-In `map.py` we can visualize our twitter data with Folium, which builds on maps using the Leaflet.js library. The first step in this file was to get `geo` data in our csv file. Since not all rows had value for `geo` column, we filter out for only those that do.
+In `map.py` we can visualize our twitter data with Folium, which builds on maps using the Leaflet.js library. The first step in this file was to get `geo` data in our csv file. Since not all rows had value for `geo` column, we filter out only those that do.
 ```python
 # get geo data only from rows with non-empty values
 locations = pandas.read_csv('./tweets.csv', usecols=[3]).dropna()
+```
+Next, we create an array, also named `geos`, that contains the coordinates of our 612 tweets. This way, it is easy to wrangle our location data when mapping them with Folium. Since our raw JSON data is in python literal syntax, we have to evaluate them with `ast.literal_eval()` to use them as a dictionary.
+```python
+geos = []
+
+for location in locations.values:
+  # add to geos array an evaluated python literal syntax of the data
+  geos.append(ast.literal_eval(location[0])['coordinates'])
 ```
