@@ -164,3 +164,4 @@ for geo in geos:
 
 tweet_map.create_map(path='map.html')
 ```
+As we can see, it is very straightfoward to set marker locations with the `geos` array.
