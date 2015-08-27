@@ -12,13 +12,13 @@ The goal of this project is to collect real-time stream of tweets, and analyse &
 ## Python (~.py) files 
 **streamer.py** - Creates a listener that collects tweets in real-time and stores them in a MongoDB collection.
 
-**to_csv.py** - Creates and writes a csv file named `tweets.csv` from data stored in MongoDB
+**to_csv.py** - Creates and writes a csv file named `tweets.csv` from data stored in MongoDB.
 
 **graph.py** - Converts data in `tweets.csv` to a pandas time series and creates a graph with [Vincent](http://vincent.readthedocs.org/en/latest/).
 
 **word_freq.py** - Filters out texts in `tweets.csv`, looking for relevant words, and plots a frequency distribution of those words using the [NLTK](http://www.nltk.org/) platform.
 
-**map.py** - 
+**map.py** - Creates a map of geo-tagged tweets with [Folium](https://github.com/python-visualization/folium).
 
 In the stream listener, as found in `streamer.py`, I'm specifically listening for tweets that contain the words 'liverpool', 'lfc', or 'liverpoolfc'.
 
